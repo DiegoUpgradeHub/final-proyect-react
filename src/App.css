@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  margin: auto;
+  justify-content: center;
+  justify-items: center;
+}
+
+
+.logo {
+  width: 300px;
+  margin: 20px auto;
+  display: flex;
+  cursor: pointer;
+}
+
+.logo:hover {
+  cursor:pointer;
+} 
+
+.navigation {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background: #fabada;
+}
+
+.link button {
+  font-weight: bold;
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.link button:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #fabada;
+}
+
+/*Home page*/
+.homeDisplay {
+  width: 50%;
+  margin: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  background: rgb(25, 11, 62);
+}
+
+.homeDisplay h1 {
+  color: #fff;
+  margin: auto;
+}
+
+/*Search page*/
+.searchDisplay {
+  width: 50%;
+  margin: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  background: rgb(11, 62, 51);
+}
+
+.searchDisplay h1 {
+  color: #fff;
+  margin: auto;
+}
+
+.searchDisplay input {
+  margin: 0 auto;
+  width: 80%;
+  height: 40px;
+}
+
+.searchDisplay .button {
+  margin: auto;
+}
+
+.searchDisplay button {
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.searchResult {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.searchResult h1 {
+  color: #fabada;
+  margin: 20px auto;
+}
+
+.searchResult .card {
+  width: 40%;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.searchResult .card img{
+  height: 50%;
+}
+
+/*Characters page*/
+.charactersGallery {
+  margin: auto;
+  padding: 2rem;
+  gap: 2rem;
+  background: rgb(11, 47, 62);
+}
+
+.charactersDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  background: rgb(11, 47, 62);
+}
+
+.card {
+  width: 250px;
+  color: white;
+  background: rgb(16, 69, 92);
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.card img {
+  height:100px;
+  border-radius: 50px;
+  object-fit: cover;
+  margin-left: 15px;
+}
+
+.text-container {
+  display: flex column;
+  justify-content: center;
+  margin-left: 10px;
+  align-content: center;
+}
+
+.charactersButton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  background: rgb(11, 47, 62);
+}
+
+.charactersButton button {
+  padding: 1rem 4rem;
+  font-size: 2rem;
+  margin: 2rem 0;
+  margin-right: 1rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.charactersButton button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.charactersButton button:not(:disabled):hover {
+  background: #fff;
+  color: rgb(59, 62, 67);
+}
