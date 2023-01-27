@@ -52,9 +52,126 @@ body {
   color: #fabada;
 }
 
+/*Not logged in user*/
+.notLogged {
+  margin: 20px auto;
+  padding: 10px;
+  background:rgb(16, 69, 92);
+  border-radius: 15px;
+  width: 500px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.notLogged button {
+  margin: 1rem;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+/*Login*/
+.loginPage {
+  width: 500px;
+  margin: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  background: rgb(67, 12, 48);
+}
+
+.loginPage h1 {
+  color: white;
+  text-align: center;
+}
+
+.loginPage button {
+  margin: 1rem;
+  padding: 1rem 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+/*Register*/
+.register {
+  width: 500px;
+  margin: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  background: rgb(67, 12, 48);
+}
+
+.register h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.register form {
+  margin: auto;
+  display: flex;
+  color: white;
+  text-align: center;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  width: 80%;
+}
+
+.register button {
+  margin: 1rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+/*Log out*/
+.logoutButton {
+  font-weight: bold;
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px solid #fabada;
+  border-radius: 10px;
+  color: #fabada;
+  background: white;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.logoutButton:hover {
+  cursor: pointer;
+  background: #fabada;
+  color: #fff;
+}
+
 /*Home page*/
 .homeDisplay {
-  width: 50%;
+  width: 500px;
   margin: auto;
   border-radius: 15px;
   display: flex;
@@ -63,11 +180,13 @@ body {
   padding: 2rem;
   gap: 2rem;
   background: rgb(25, 11, 62);
+  color: #fff;
 }
 
 .homeDisplay h1 {
-  color: #fff;
   margin: auto;
+  font-size: 3.2rem;
+  text-align: center;
 }
 
 /*Search page*/
@@ -157,6 +276,7 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
+  text-align: center;
 }
 
 .card img {
@@ -204,3 +324,5 @@ body {
   background: #fff;
   color: rgb(59, 62, 67);
 }
+
+/*Profile*/

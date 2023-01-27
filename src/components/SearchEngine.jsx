@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Axios from "axios";
 
 const SearchEngine = () => {
@@ -32,17 +31,6 @@ const SearchEngine = () => {
 
     return (
         <div className="searchPage">
-            <header className="navigation">
-                <Link to="/" className="link">
-                    <button>Home</button>
-                </Link>
-                <Link to="/SearchEngine" className="link">
-                    <button>Buscador</button>
-                </Link>
-                <Link to="/Characters" className="link">
-                    <button>Todos los personajes</button>
-                </Link>
-            </header>
             <body>
                 <div className="searchDisplay">
                     <h1>Buscador de personajes</h1>
@@ -55,7 +43,6 @@ const SearchEngine = () => {
                     />
                     <div className="button">
                     {characterName && <button onClick={searchCharacter}>Buscar personaje</button>}
-
                     </div>
                 </div>
                 <div className="searchResult">
