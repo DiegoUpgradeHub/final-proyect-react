@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
+import { Box, Button, ButtonGroup, Flex } from "@chakra-ui/react";
 
 import Card from "./Card";
 
@@ -18,7 +19,11 @@ const Gallery = () => {
     });
 
     if (status === "loading") {
-        return <div className="loading-container">Carregando...</div>;
+        return (
+        <div className="loading-container">
+            <p>Cargando...</p>
+            <img src="https://w7.pngwing.com/pngs/375/440/png-transparent-rick-sanchez-morty-smith-middle-finger-miscellaneous-grass-cartoon-thumbnail.png" alt="cargando"/>
+        </div>);
     }
 
     if (status === "error") {
@@ -26,34 +31,44 @@ const Gallery = () => {
     }
 
     return (
-        <div>
-            <div className="charactersDisplay">
+        <Box 
+            justify="center"
+            align="center"
+            wrap="wrap"
+        >
+            <Flex className="charactersDisplay"
+                justify="center"
+                align="center"
+                wrap="wrap"
+            >
                 {data.results.map((character) => (
                     <Card character={character} key={character.id} />
                 ))}
-                
-            </div>
-            <div className="charactersButton">
-                <button disabled={page === 1} onClick={() => setPage(1)}>
+            </Flex>
+            <ButtonGroup className="charactersButton"
+                isAttached="true"
+                colorScheme='yellow'
+            >
+                <Button isDisabled={page === 1} onClick={() => setPage(1)}>
                     Inicio
-                </button>
-                <button disabled={page === 1} onClick={() => setPage((old) => old - 1)}>
+                </Button>
+                <Button isDisabled={page === 1} onClick={() => setPage((old) => old - 1)}>
                     Anterior
-                </button>
-                <button
-                    disabled={!data.info.next}
+                </Button>
+                <Button
+                    isDisabled={!data.info.next}
                     onClick={() => setPage((old) => old + 1)}
                 >
                     Próximo
-                </button>
-                <button
-                    disabled={!data.info.next}
+                </Button>
+                <Button
+                    isDisabled={!data.info.next}
                     onClick={() => setPage(42)}
                 >
                     final
-                </button>
-            </div>
-        </div>
+                </Button>
+            </ButtonGroup>
+        </Box>
     );
 }
 

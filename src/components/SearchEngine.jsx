@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import { Box, Button, Flex, Image, Input, Text } from "@chakra-ui/react";
+import { styles } from "../styles/styles";
 
 const SearchEngine = () => {
 
@@ -30,37 +32,66 @@ const SearchEngine = () => {
     };
 
     return (
-        <div className="searchPage">
-            <body>
-                <div className="searchDisplay">
-                    <h1>Buscador de personajes</h1>
+        <Flex className="searchPage">
+            <Flex
+                bgColor={styles.highlight }
+                color="white"
+                m="30px"
+                p="25px"
+                w="80%"
+                borderRadius="4px"
+                direction="column"
+                justify="center"
+                align="center"
+            >
+                <Box className="searchDisplay">
+                    <Text fontSize="4xl" as="b">Buscador de personajes</Text>
                     
-                    <input 
+                    <Input 
+                    placeholder="Buscar personaje"
+                    variant="flushed"
+                    size='lg'
                     type="text"
                     onChange={(event) => {
                         setCharacterName(event.target.value);
                     }}
                     />
-                    <div className="button">
-                    {characterName && <button onClick={searchCharacter}>Buscar personaje</button>}
-                    </div>
-                </div>
-                <div className="searchResult">
+                    <Flex className="button" justify="center">
+                    {characterName && <Button colorScheme='teal' mt="30px" onClick={searchCharacter}>Buscar personaje</Button>}
+                    </Flex>
+                </Box>
+                <Flex className="searchResult"
+                    mt="40px"
+                >
                     {!characterChosen ? (
-                    <h1> Por favor elige un personaje </h1>
+                    <Text fontSize="2xl"> Por favor elige un personaje </Text>
                     ) : (
-                    <div className="card">
-                        <img src={character.image} alt={character.name} />
-                        <div className="text-container">
-                            <h3>{character.id} - {character.name}</h3>
-                            <p>{character.species}</p>
-                            <p>{character.status}</p>
-                        </div>
-                    </div>
+                    <Flex className="card"
+                        direction="column"
+                        justify="center"
+                        align="center"
+                    >
+                        <Image 
+                            src={character.image}
+                            alt={character.name}
+                            borderRadius='50px'
+                            boxSize='300px'
+                            objectFit='cover'
+                            m="15px"
+                        />
+                        <Flex className="text-container"
+                            direction="column"
+                            justify="center"
+                            align="center"
+                        >
+                            <Text fontSize="3xl" as="b">{character.id} - {character.name}</Text>
+                            <Text fontSize="1xl" as="i">{character.species} - {character.status}</Text>
+                        </Flex>
+                    </Flex>
                     )}
-                </div>
-            </body>
-        </div>
+                </Flex>
+            </Flex>
+        </Flex>
     )
 }
 

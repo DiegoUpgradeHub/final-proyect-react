@@ -4,6 +4,8 @@ import { Link, Route, Routes } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { signIn } from './utils/auth';
 
+
+
 import Home from "./components/Home";
 import SearchEngine from "./components/SearchEngine";
 import Characters from './components/Characters';
@@ -12,6 +14,7 @@ import LogoutButton from './components/LogoutButton';
 import LoginForm from './components/LoginForm';
 import Profile from './components/Profile';
 import Register from './components/Register';
+import { Button, ButtonGroup, Flex, Image } from '@chakra-ui/react';
 
 const queryClient = new QueryClient();
 
@@ -33,37 +36,71 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <Flex className="App"
+      direction="column"
+      justify="left"
+      align="center"
+    >
       <Link to="/">
-          <img className="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg" alt="Rick & Morty Proyect" />
+          <Image className="logo" 
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg" 
+            alt="Rick & Morty Proyect" 
+            boxSize='350px'
+          />
       </Link>
       {authenticated ? (
         <>
-          <header className="navigation">
+          <Flex className="navigation"
+            direction="row"
+            justify="center"
+            align="center"
+            wrap="wrap"
+            m="10px"
+          >
             <Link to="/" className="link">
-              <button>Home</button>
+              <Button
+                m="10px"
+                p="25px"
+                w="175px"
+              >
+              Home</Button>
             </Link>
             <Link to="/SearchEngine" className="link">
-              <button>Buscador</button>
+            <Button
+                m="10px"
+                p="25px"
+                w="175px"
+              >
+              Buscador</Button>
             </Link>
             <Link to="/Characters" className="link">
-              <button>Todos los personajes</button>
+            <Button
+                m="10px"
+                p="25px"
+                w="175px"
+              >
+              Listado completo</Button>
             </Link>
             <Link to="/profile" className="link">
-              <button>Profile</button>
+            <Button
+                m="10px"
+                p="25px"
+                w="175px"
+              >
+              Profile</Button>
             </Link>
             <LogoutButton logout={logout} />
-          </header>
+          </Flex>
         </>
         ) : (
-          <div className="notLogged">
+          <ButtonGroup className="notLogged">
             <Link to="/login">
-              <button>Iniciar sesión</button>
+              <Button>Iniciar sesión</Button>
             </Link>
             <Link to="/Register">
-              <button>Registrarme</button>
+              <Button>Registrarme</Button>
             </Link>
-          </div>
+          </ButtonGroup>
         )
       }
       <div className="Routes">
@@ -78,7 +115,7 @@ function App() {
         </Routes>
         </QueryClientProvider>
       </div>
-    </div>
+    </Flex>
   );
 }
 

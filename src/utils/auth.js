@@ -1,4 +1,4 @@
-const users = [
+export let users = [
   { email: "usuario1@test.com", password: "000", name: "Usuario 1" },
   { email: "usuario2@test.com", password: "123", name: "Usuario 2" },
   { email: localStorage.email, password: localStorage.password }

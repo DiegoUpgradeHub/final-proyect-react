@@ -1,3 +1,5 @@
+/*
+
 body {
   margin: 0;
   padding: 0;
@@ -52,7 +54,7 @@ body {
   color: #fabada;
 }
 
-/*Not logged in user*/
+/*Not logged in user
 .notLogged {
   margin: 20px auto;
   padding: 10px;
@@ -77,7 +79,7 @@ body {
   transition: all 200ms ease-in-out;
 }
 
-/*Login*/
+/*Login
 .loginPage {
   width: 500px;
   margin: auto;
@@ -107,7 +109,7 @@ body {
   transition: all 200ms ease-in-out;
 }
 
-/*Register*/
+/*Register
 .register {
   width: 500px;
   margin: auto;
@@ -150,7 +152,7 @@ body {
   transition: all 200ms ease-in-out;
 }
 
-/*Log out*/
+/*Log out
 .logoutButton {
   font-weight: bold;
   padding: 1rem;
@@ -169,7 +171,7 @@ body {
   color: #fff;
 }
 
-/*Home page*/
+/*Home page
 .homeDisplay {
   width: 500px;
   margin: auto;
@@ -189,7 +191,7 @@ body {
   text-align: center;
 }
 
-/*Search page*/
+/*Search page
 .searchDisplay {
   width: 50%;
   margin: auto;
@@ -250,7 +252,7 @@ body {
   height: 50%;
 }
 
-/*Characters page*/
+/*Characters page
 .charactersGallery {
   margin: auto;
   padding: 2rem;
